@@ -1,0 +1,38 @@
+name: PaperIRC
+version: '${project.version}'
+main: cn.paperirc.PaperIrcPlugin
+api-version: '26.3'
+description: 独立玩家 TLS 身份的 Minecraft 与 IRC 公共聊天桥接
+author: PaperIRC
+commands:
+  irc:
+    description: IRC 个人设置及管理
+    usage: /irc help
+permissions:
+  paperirc.on:
+    description: 开启自己的 IRC
+    default: true
+  paperirc.off:
+    description: 关闭自己的 IRC
+    default: true
+  paperirc.nick:
+    description: 设置自己的 IRC 昵称主体
+    default: true
+  paperirc.resetnick:
+    description: 重置自己的 IRC 昵称
+    default: true
+  paperirc.status:
+    description: 查看自己的 IRC 状态
+    default: true
+  paperirc.help:
+    description: 查看 IRC 插件帮助
+    default: true
+  paperirc.reload:
+    description: 重载 IRC 配置
+    default: op
+  paperirc.adminstatus:
+    description: 查看整体 IRC 连接状态
+    default: op
+  paperirc.reconnect:
+    description: 手动重连启用的 IRC 连接
+    default: op

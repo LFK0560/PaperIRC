@@ -1,0 +1,51 @@
+# 首次安装保持停用。填写真实 IRC 主机、TLS 端口和频道后设为 true。
+enabled: false
+irc:
+  # 必须匹配公共 CA 证书中的主机名；.invalid 是占位地址，插件不会连接它。
+  host: irc.example.invalid
+  port: 6697
+  channel: '#minecraft'
+  bot-nickname: MCBot
+  player-prefix: MC_
+  # 优先使用服务器 005 NICKLEN；此值是未公布时的回退。
+  # ngIRCd MaxNickLength 建议同时设为 32。自动后缀固定预留 5 个字符。
+  nickname-length-fallback: 32
+  nickname-retries: 6
+timeouts:
+  connect-seconds: 10
+  handshake-seconds: 10
+  registration-seconds: 30
+  join-seconds: 15
+  nickname-seconds: 10
+  idle-seconds: 90
+  pong-seconds: 20
+  shutdown-seconds: 5
+reconnect:
+  initial-seconds: 1
+  max-seconds: 60
+  jitter: 0.2
+  stable-seconds: 30
+  # 所有个人连接和机器人共享的建连速度。
+  connections-per-second: 2
+chat:
+  # 纯文本模板。必须同时包含 [IRC]、{nick} 和 {message} 各一次。
+  # 输入中的 MiniMessage 标签、点击指令和 § 代码始终作为普通文本。
+  format: '[IRC] <{nick}> {message}'
+queries:
+  per-speaker-cooldown-seconds: 5
+  global-cooldown-seconds: 1
+  feedback-cooldown-seconds: 10
+flood:
+  # 每个连接独立限制；所有分段计入发送额度。
+  lines-per-second: 2
+  send-buffer-lines: 64
+  max-message-codepoints: 8192
+  max-message-parts: 64
+  # 为转发时的 :nick!ident@host 空间预留字节；最小值 160。
+  relay-prefix-reserve-bytes: 200
+  # 内部跨线程事件队列上限；队列满会明确提示或断开对应入站连接。
+  event-buffer: 2048
+logging:
+  # INFO 或 DEBUG；DEBUG 也不记录聊天正文或证书/身份密钥。
+  level: INFO
+  repeated-error-cooldown-seconds: 30

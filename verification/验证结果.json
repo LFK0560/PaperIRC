@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-13",
+  "timezone": "Asia/Shanghai",
+  "plugin_version": "1.0.1",
+  "java": "25.0.4.1",
+  "maven": "3.9.13",
+  "paper_api": "26.3.build.178-stable",
+  "jar_sha256": "677abefa81f05a75147cd104f5079b2a6c6b9907300335aa3f04bacc75f75045",
+  "core_tests_passed": 36,
+  "real_ngircd_tests_passed": 1,
+  "real_ngircd": "28 / OpenSSL / macOS arm64 / Windows CRLF MOTD",
+  "paper_load_and_query_checks_passed": 7,
+  "paper_motd": "CRCRLF + empty frames",
+  "tests": [
+    {
+      "name": "cn.paperirc.core.BridgeIntegrationTest",
+      "tests": "13",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "cn.paperirc.core.ConfigurationTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "cn.paperirc.core.QueryTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "cn.paperirc.core.RealNgircdTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "cn.paperirc.irc.ProtocolTest",
+      "tests": "9",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "cn.paperirc.irc.TlsSessionTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "cn.paperirc.persistence.PlayerStoreTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "public_irc_registration": {
+    "server": "ngIRCd 27",
+    "status": "PASS",
+    "trust": "default JVM CA + hostname verification",
+    "old_jar_result": "IllegalArgumentException：非法 IRC 行",
+    "observed_motd_boundary": "CR CR LF",
+    "patched_motd_lines": 24,
+    "casemapping": "ascii",
+    "nicklen": 20,
+    "channel_joined": false,
+    "chat_sent": false,
+    "ip_connection": "expected rejection: no SAN matching IP"
+  },
+  "remaining_manual": [
+    "Linux x86_64 目标机及其实际 JVM 配置",
+    "真实 Minecraft 26.3 客户端登录、权限及完整游戏聊天"
+  ],
+  "open_source_build": {
+    "date": "2026-10-14",
+    "license": "MIT",
+    "jar_sha256": "c5a33722285590df81982dd919504d6927094b11bf61cb4752ebb8fe47d02692",
+    "core_tests_passed": 36,
+    "real_ngircd_test_skipped": 1
+  }
+}

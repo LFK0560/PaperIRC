@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>cn.paperirc</groupId><artifactId>paperirc</artifactId><version>1.0.1</version>
+  <name>PaperIRC</name>
+  <description>Per-player TLS IRC chat bridge for Paper 26.3 and Java 25.</description>
+  <url>https://github.com/LFK0560/PaperIRC</url>
+  <licenses>
+    <license><name>MIT License</name><url>https://opensource.org/license/mit/</url><distribution>repo</distribution></license>
+  </licenses>
+  <properties>
+    <maven.compiler.release>25</maven.compiler.release>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.build.outputTimestamp>2026-10-13T00:00:00Z</project.build.outputTimestamp>
+  </properties>
+  <repositories><repository><id>papermc</id><url>https://repo.papermc.io/repository/maven-public/</url></repository></repositories>
+  <dependencies>
+    <dependency><groupId>io.papermc.paper</groupId><artifactId>paper-api</artifactId><version>26.3.build.178-stable</version><scope>provided</scope></dependency>
+    <dependency><groupId>org.junit.jupiter</groupId><artifactId>junit-jupiter</artifactId><version>5.12.2</version><scope>test</scope></dependency>
+    <dependency><groupId>org.slf4j</groupId><artifactId>slf4j-nop</artifactId><version>2.0.17</version><scope>test</scope></dependency>
+  </dependencies>
+  <build>
+    <finalName>PaperIRC-${project.version}</finalName>
+    <resources>
+      <resource><directory>${project.basedir}</directory><targetPath>META-INF</targetPath><filtering>false</filtering><includes><include>LICENSE</include></includes></resource>
+      <resource><directory>src/main/resources</directory><filtering>true</filtering><includes><include>plugin.yml</include></includes></resource>
+      <resource><directory>src/main/resources</directory><filtering>false</filtering><excludes><exclude>plugin.yml</exclude></excludes></resource>
+    </resources>
+    <plugins>
+      <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-resources-plugin</artifactId><version>3.3.1</version></plugin>
+      <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.14.1</version><configuration><compilerArgs><arg>-Xlint:deprecation</arg></compilerArgs></configuration></plugin>
+      <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.5.3</version></plugin>
+      <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-jar-plugin</artifactId><version>3.4.2</version></plugin>
+    </plugins>
+  </build>
+</project>

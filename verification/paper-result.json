@@ -1,0 +1,15 @@
+{
+  "paper": "26.3-178",
+  "paper_sha256": "5dd0c8fb20a96eb7c98f3c4b1c890e99ef6db56fd689a2cf06975a3471fda757",
+  "checks": [
+    "官方 Paper 26.3 build 178 加载 JAR，无玩家时只有机器人",
+    "无人在线 IRC 查询返回 0/20",
+    "真实人数/TPS/MSPT/JVM 运行时间查询，隐私字段未出现",
+    "IRC !help 查询正常",
+    "控制台游戏命令及权限描述已注册",
+    "无效重载保留原配置，有效重载与手动重连成功",
+    "停服清理全部连接并尽力发送 QUIT"
+  ],
+  "status": "PASS",
+  "runtime": "verification/runtime/paper-702d842e"
+}
