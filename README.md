@@ -17,7 +17,7 @@
 ## 安装
 
 1. 使用 Java 25 启动 Paper 26.3。已核实并固定 API 为 `io.papermc.paper:paper-api:26.3.build.178-stable`，描述文件使用 `api-version: '26.3'`。
-2. 将 `target/PaperIRC-1.0.1.jar` 放进服务端 `plugins/`，正常启动服务器。
+2. 从 [GitHub Releases](https://github.com/LFK0560/PaperIRC/releases/latest) 下载 `PaperIRC-1.0.1.jar`，放进服务端 `plugins/`，正常启动服务器。Release 同时提供完整源码/成品 ZIP 和 SHA-256 校验值。
 3. 首次生成的 `plugins/PaperIRC/config.yml` 默认 `enabled: false`。填写真实主机、直接 TLS 端口和单个频道后改为 `true`。
 4. 在控制台执行 `irc reload`，再执行 `irc adminstatus` 检查机器人状态。游戏中使用 `/irc status` 查看个人状态。
 
